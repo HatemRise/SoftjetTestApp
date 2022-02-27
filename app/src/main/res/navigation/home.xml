@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    app:startDestination="@id/mainScreenFragment">
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="com.example.softjettest.MainScreenFragment"
+        android:label="Users"
+        tools:layout="@layout/main_screen_fragment" >
+        <action
+            android:id="@+id/action_mainScreenFragment_to_userInfoFragment"
+            app:destination="@id/userInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userInfoFragment"
+        android:name="com.example.softjettest.UserInfoFragment"
+        android:label="User info"
+        tools:layout="@layout/user_info_fragment">
+        <argument
+            android:name="user"
+            app:argType="com.example.softjettest.repositories.entities_and_models.User" />
+    </fragment>
+</navigation>
